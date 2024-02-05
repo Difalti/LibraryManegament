@@ -1,0 +1,27 @@
+﻿@model Book
+
+<h2>Редактирай книга</h2>
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div>
+        <label asp-for="Title">Заглавие:</label>
+        <input asp-for="Title" />
+        <span asp-validation-for="Title"></span>
+    </div>
+    <div>
+        <label asp-for="Author">Автор:</label>
+        <input asp-for="Author" />
+        <span asp-validation-for="Author"></span>
+    </div>
+    <div>
+        <label asp-for="Year">Година:</label>
+        <input asp-for="Year" />
+        <span asp-validation-for="Year"></span>
+    </div>
+    <div>
+        <label asp-for="Copies">Брой копия:</label>
+        <input asp-for="Copies" />
+        <span asp-validation-for="Copies"></span>
+    </div>
+    <button type="submit">Запази промените</button>
+</form>
